@@ -1,0 +1,153 @@
+.my-container {
+    padding: 14px 10px;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+
+legend.fieldset-border {
+    width: auto !important;
+}
+
+.first-fieldset span {
+    margin-bottom: 20px !important;
+}
+
+
+/* Container para os atributos */
+.atributos-container {
+    padding: 10px;
+}
+
+/* Estilo para cada card de atributo */
+.atributo-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+/* Efeito de destaque ao passar o cursor */
+.atributo-card:hover {
+    background-color: #e2e6ea;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para o texto dentro do card */
+.atributo-card p {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.descricao-text {
+    word-wrap: break-word; /* Permite que palavras muito longas sejam quebradas */
+    white-space: normal;   /* Força o texto a quebrar e ocupar várias linhas */
+}
+
+
+app-aside-right::ng-deep aside.active .container-aside {
+    width: 1600px !important;
+}
+
+
+.file-upload {
+    position: relative;
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px dashed #ced4da;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.file-upload:hover {
+    background-color: #e9ecef;
+    border-color: #007bff;
+}
+
+.file-upload input[type="file"] {
+    display: none;
+}
+
+.file-upload label {
+    display: inline-block;
+    margin: 0;
+    cursor: pointer;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.file-upload label i {
+    margin-right: 5px;
+}
+
+.file-upload small {
+    display: block;
+    margin-top: 5px;
+    color: #6c757d;
+}
+
+.preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 15px;
+}
+
+.preview-item {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.remove-btn {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    z-index: 10;
+    border-radius: 10%;
+    padding: 4px;
+}
+
+.img-thumbnail {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+
+.pdf-thumbnail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80px;
+    height: 100px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #ff0000;
+    font-size: 24px;
+}
+
+
+.pdf-thumbnail p {
+    font-size: 12px;
+    color: #555;
+    margin-top: 5px;
+}
+
+
