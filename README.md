@@ -22,9 +22,8 @@ replace with your text editor for the following: `github_username`, `repo_name`,
 
 ### Construído com:
 
-* [![Angular][Angular.io]][Angular-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![Angular][Angular.io]][Angular-url] [![Typescript][Typescript.com]][Typescript-url] [![Js][Js.com]][Js-url] [![JQuery][JQuery.com]][JQuery-url]
+* [![HTML][HTML.com]][HTML-url] [![Css][Css.com]][Css-url] [![Saas][Saas.com]][Saas-url] [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
@@ -136,3 +135,13 @@ GitHub: greciodiogo
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+[Typescript.com]: https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
+[Typescript-url]: https://www.typescriptlang.org/
+[HTML-url]: https://www.w3schools.com/html/
+[HTML.com]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
+[Saas-url]: https://sass-lang.com/
+[Saas.com]: https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white
+[Css-url]: https://www.w3schools.com/css/
+[Css.com]: https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white
+[Js-url]: https://www.w3schools.com/js/
+[Js.com]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black

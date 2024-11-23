@@ -5,6 +5,7 @@ import { FnService } from '@app/shared/services/fn.helper.service';
 import { diffString, diff } from 'json-diff';
 @Component({
   selector: 'app-dashboard',
+  styleUrls: ['./dashboard.component.css'],
   templateUrl: './dashboard.component.html',
 })
 export class DashboardComponent implements OnInit, OnDestroy {

@@ -1,20 +1,16 @@
 .main-header, .btn-info {
-  background-color: var(--app-main-color) !important;
+  background-color: #fff !important;
 }
 .nav-sidebar > .nav-item .nav-icon, .sidebar-dark-info .nav-sidebar>
 .nav-item>.nav-link.active, .sidebar-light-info .nav-sidebar>.nav-item>.nav-link.active, .user-panel, .table > thead,
 .sidebar-dark-info .nav-treeview>.nav-item>.nav-link.active, .sidebar-dark-info .nav-treeview>.nav-item>.nav-link.active:hover
 {
-  background-color: var(--app-main-color) !important;
+  background-color: var(--app-color) !important;
 }
 
 .sidebar-dark-info .nav-treeview>.nav-item>.nav-link:hover {
   color: #fff;
-  background: var(--app-main-color);
-}
-
-.nav-sidebar>.nav-item .nav-icon {
-  border: 1px solid var(--app-main-color);
+  background: var(--app-color);
 }
 
 .sidebar-dark-info .nav-sidebar > .nav-item.menu-open > .nav-link,
@@ -23,30 +19,26 @@
 , [class*=sidebar-dark-] .nav-treeview>.nav-item>.nav-link:focus, [class*=sidebar-dark-] .nav-treeview>.nav-item>.nav-link:hover
 {
   color: #fff;
-  background-color: #036DA8 !important;
+  background-color: #064b06 !important;
 }
 
 .sidebar::-webkit-scrollbar-track {
-  background-color: var(--app-main-color)
+  background-color: var(--app-color)
 }
 .sidebar::-webkit-scrollbar {
   width: 8px;
-  background: var(--app-main-color)
+  background: var(--app-color)
 }
 .sidebar::-webkit-scrollbar-thumb {
-  background: var(--app-main-color)
+  background: var(--app-color)
 }
 
-
-.layout-fixed .main-sidebar {
-  border-right: 1px solid #036DA8;
-}
 
 .main-footer {
   width: 100%;
   bottom: 0;
   padding: 28px;
-  background: url(/assets/img/logo_at_unig_itgest.png) var(--app-main-color) 50% 31% no-repeat padding-box !important;
+  background: url(/assets/img/logo_at_unig_itgest.png) var(--app-color) 50% 31% no-repeat padding-box !important;
   background-size: 9% !important;
 }
 
@@ -56,19 +48,19 @@
 
 .filter-color-search:hover{
   color: #fff;
-  background-color: var(--app-main-color);
+  background-color: var(--app-color);
 }
 
 .filter-color-button{
   color: #fff !important;
-  background-color: var(--app-main-color);
-  border: 1px solid var(--app-main-color);
+  background-color: var(--app-color);
+  border: 1px solid var(--app-color);
 }
 
 .filter-color-button:hover {
   color: #fff;
-  background-color: var(--app-main-color);
-  border-color: var(--app-main-color);
+  background-color: var(--app-color);
+  border-color: var(--app-color);
 }
 
 .mat-raised-button.mat-button-disabled.mat-button-disabled{
@@ -76,8 +68,8 @@
 }
 .subtitleColor > h4{
   background: #f2f4f6;
-  color: #036DA8;
-  border: 1px solid var(--app-main-color);
+  color: var(--app-color);
+  border: 1px solid var(--app-color);
   margin-bottom: 0px;
 }
 
@@ -87,31 +79,31 @@
 
 .cabecTableColor > thead > tr > th{
   color: #fff !important;
-  background-color: var(--app-main-color) !important;
+  background-color: var(--app-color) !important;
 }
 
 .cabecTableSecundaryColor{
   color: #fff !important;
-  background-color: #036DA8 !important;
+  background-color: var(--app-color) !important;
 }
 
 .cabecTableColor2 > tbody > tr > th{
   color: #fff !important;
-  background-color: var(--app-main-color) !important;
+  background-color: var(--app-color) !important;
 }
 
 .cabecTableColor4 > tr{
   color: #fff !important;
-  background-color: var(--app-main-color) !important;
+  background-color: var(--app-color) !important;
 }
 
 .cabecTableColor3 > th{
   color: #fff !important;
-  background-color: var(--app-main-color) !important;
+  background-color: var(--app-color) !important;
 }
 
 .colorTabSection{
-  background-color: var(--app-main-color) !important;
+  background-color: var(--app-color) !important;
   color: #fff !important;
 }
 
@@ -124,22 +116,21 @@
   background: #eeeeee;
   color: #000000;
   padding: 9px 22px;
-  border: 1px solid var(--app-main-color);
+  border: 1px solid var(--app-color);
   border-radius: 4px;
 }
 
 .subtitleColor3{
-  background: var(--app-main-color);
+  background: var(--app-color);
   color: #fff;
   padding: 9px 22px;
-  border: 1px solid var(--app-main-color);
+  border: 1px solid var(--app-color);
   border-radius: 4px;
 }
 
 .borderDiv > h4{
   background: #eee;
   padding: 12px 9px;
-  border: 1px solid var(--app-main-color) !important;
   border-radius: 4px;
   text-align: center;
   font-size: 21px;
@@ -151,65 +142,60 @@
   text-align: center;
   font-size: 71px;
   margin-bottom: 40px;
-  color: var(--app-main-color);
+  color: var(--app-color);
 }
 
 .labelInfo{
   padding: 8px;
   border-radius: 4px;
   font-size: 18px;
-  border: 1px solid var(--app-main-color) !important;
 }
 
 .infoSaldo > h3{
   background: #eee; 
   padding: 22px; 
-  border: 1px solid var(--app-main-color);  
+  border: 1px solid var(--app-color);  
   border-radius:4px;
 }
 /*
  * Cor do button radius
  */
 .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
-  border-color: var(--app-main-color) !important;
+  border-color: var(--app-color) !important;
 }
 
 .mat-radio-button.mat-accent .mat-radio-inner-circle{
-  background-color: var(--app-main-color) !important;
+  background-color: var(--app-color) !important;
 }
 
 .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple{
-  background-color: var(--app-main-color) !important;
+  background-color: var(--app-color) !important;
 }
 
 h4.label {
   color: #fff;
-  background-color: var(--app-main-color) !important;
+  background-color: var(--app-color) !important;
 }
 
 .text-color{
-  color: var(--app-main-color);
+  color: var(--app-color);
 }
 
 .boxDiv{
   color: #fff; 
   border-radius: 5px;
-  background-color: var(--app-main-color) !important;
+  background-color: var(--app-color) !important;
   padding: 8px;
-}
-
-.dividerLine{
-  border-left: 2px solid var(--app-main-color);
 }
 
 .reportingResumeTable{
   color: #fff;
-  background-color: var(--app-main-color) !important;
+  background-color: var(--app-color) !important;
   padding: 10px;
 }
 
 .borderColorResumeReporting{
-  color: var(--app-main-color) !important; 
+  color: var(--app-color) !important; 
   font-size: 40px
 }
 
@@ -219,5 +205,5 @@ h4.label {
 
 /*icon color from comentary*/
 .bg-red {
-  background-color: var(--app-main-color)!important;
+  background-color: var(--app-color)!important;
 }
