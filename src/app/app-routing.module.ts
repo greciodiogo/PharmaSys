@@ -39,7 +39,7 @@ export const routes: Routes = [
     },
   },
   {
-    path: '',
+    path: 'dashboard',
     data: {
       title: '',
     },
@@ -69,36 +69,30 @@ export const routes: Routes = [
       },
     ],
   },
-
   {
-    path: '',
-    data: {
-      title: 'Login',
-    },
-    children: [
-      {
-        path: 'login',
-        data: {
-          title: 'Login',
-          layout: { customLayout: false, layoutNavigationTop: true },
-        },
-        loadChildren: () =>
-          import(
-            './resources/Modules/06Security/00Auth/authentication.module'
-          ).then((m) => m.AuthenticationModule),
-      },
-    ],
+    path: '**',
+    redirectTo: '404',
   },
 
-  {
-    path: '404',
-    component: P404Component,
-    data: {
-      title: 'Page 404',
-      layout: { customLayout: false, layoutNavigationTop: true },
-    },
-  },
-
+  // {
+  //   path: '',
+  //   data: {
+  //     title: 'Login',
+  //   },
+  //   children: [
+  //     {
+  //       path: 'login',
+  //       data: {
+  //         title: 'Login',
+  //         layout: { customLayout: false, layoutNavigationTop: true },
+  //       },
+  //       loadChildren: () =>
+  //         import(
+  //           './resources/Modules/06Security/00Auth/authentication.module'
+  //         ).then((m) => m.AuthenticationModule),
+  //     },
+  //   ],
+  // },
 ];
 
 @NgModule({

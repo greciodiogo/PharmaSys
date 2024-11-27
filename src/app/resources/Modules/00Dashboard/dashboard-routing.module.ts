@@ -6,7 +6,7 @@ import { DashboardComponent } from './dashboard.component';
 
 const routes: Routes = [
   {
-    path: 'dashboard',
+    path: '',
     component: DashboardComponent,
     canActivate: [AuthGuard,PermissionGuard],
     data: {
