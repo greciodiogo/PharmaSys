@@ -67,51 +67,6 @@ export const routes: Routes = [
             (m) => m.UsersModule
           ),
       },
-      {
-        path: 'permissions',
-        data: {
-          title: 'Permissões',
-          layout: { customLayout: false, layoutNavigationTop: true },
-        },
-        loadChildren: () =>
-          import(
-            './resources/Modules/06Security/01Acl/01Permission/permissions.module'
-          ).then((m) => m.PermissionsModule),
-      },
-      {
-        path: 'roles',
-        data: {
-          title: 'Roles',
-          layout: { customLayout: false, layoutNavigationTop: true },
-        },
-        loadChildren: () =>
-          import(
-            './resources/Modules/06Security/01Acl//02Roles/roles.module'
-          ).then((m) => m.RolesModule),
-      },
-      {
-        path: 'modulos',
-        data: {
-          title: 'Módulos',
-          layout: { customLayout: false, layoutNavigationTop: true },
-        },
-        loadChildren: () =>
-          import(
-            './resources/Modules/06Security/01Acl//03Modulos/modulos.module'
-          ).then((m) => m.ModulosModule),
-      },
-   
-      {
-        path: 'permission_fields',
-        data: {
-          title: 'Permissões de Campos',
-          layout: { customLayout: false, layoutNavigationTop: true },
-        },
-        loadChildren: () =>
-          import(
-            './resources/Modules/06Security/01Acl/04PermissionField/permission-fields.module'
-          ).then((m) => m.PermissionFieldsModule),
-      }
     ],
   },
 
@@ -147,7 +102,7 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+  imports: [RouterModule.forRoot(routes, {})],
   exports: [RouterModule],
 })
 export class AppRoutingModule { }

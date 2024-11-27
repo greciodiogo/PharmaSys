@@ -1,5 +1,4 @@
 import { Deserializable } from '@app/shared/models/deserializable';
-import { Role } from '../../01Acl/models/Role';
 export class User implements Deserializable {
   id?: number = null;
   email: string;
@@ -8,7 +7,7 @@ export class User implements Deserializable {
   name: string = null;
   telefone: string;
   is_actived: boolean;
-  perfil: Role[] = [];
+  perfil: any[] = [];
   loja_id: number;
   direccao_id: number;
   loja:any;

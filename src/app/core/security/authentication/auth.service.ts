@@ -10,10 +10,8 @@ import { finalize, tap } from 'rxjs/operators';
 import { environment as env } from '@env/environment';
 import { ToastrService } from 'ngx-toastr';
 import Swal from 'sweetalert2';
-import 'sweetalert2/src/sweetalert2.scss';
-import { Permission } from '@app/resources/Modules/06Security/01Acl/models/Permission';
+// import 'sweetalert2/src/sweetalert2.scss';
 import { Token } from '@app/resources/Modules/06Security/00Auth/models/token';
-import { PermissionFields } from '@app/resources/Modules/06Security/01Acl/models/PermissionFields';
 @Injectable({
   providedIn: 'root',
 })
@@ -37,15 +35,15 @@ export class AuthService {
     return new Token().deserialize(this.getItemLocalStorage.token);
   }
 
-  get permissions(): Permission[] {
-    const permissions: Permission[] = !this.isLoggedIn
+  get permissions(): any[] {
+    const permissions: any[] = !this.isLoggedIn
       ? []
       : this.getItemLocalStorage.permissions.map((permission) => permission);
     return permissions;
   }
 
-  get permissionFields(): PermissionFields[] {
-    const permissionFields: PermissionFields[] = !this.isLoggedIn
+  get permissionFields(): any[] {
+    const permissionFields: any[] = !this.isLoggedIn
       ? []
       : this.getItemLocalStorage.permissionFields.map((permission) => permission);
     return permissionFields;
@@ -132,11 +130,11 @@ export class AuthService {
       customClass: {
         container: 'container-class',
         popup: 'popup-class',
-        header: 'header-class',
+        // header: 'header-class',
         title: 'title-class',
         closeButton: 'close-button-class',
         icon: 'warning',
-        content: 'content-class',
+        // content: 'content-class',
         input: 'input-class',
         actions: 'actions-class',
         confirmButton: 'btn btn-success',
