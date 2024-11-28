@@ -8,20 +8,10 @@
 
   <!-- Sidebar -->
   <div class="sidebar">
-    <!-- Sidebar user (optional) -->
-    <div class="user-panel d-flex">
-      <div class="image">
-        <img src="../../../../assets/img/avatar5.png" class="img-circlee elevation-2e" alt="User Image" />
-      </div>
-      <div class="info">
-        <a href="#" class="d-block">{{ this.authenticated.user.name }}</a>
-      </div>
-    </div>
 
-
-
+    <h3 style="padding: 2rem; color: white; opacity: .75;">Menu</h3>
     <!-- Sidebar Menu -->
-    <nav class="mt-2">
+    <nav class="mt-0">
       <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview" role="menu"
         data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
@@ -33,229 +23,457 @@
           </a>
         </li>
 
-                <!--LOGISTICA-->
-                <li class="nav-item has-treeview" routerLinkActive="menu-open" *ngIf="this.canActivateRouterLink('logistica')">
+        <li class="nav-item has-treeview">
+          <a routerLink="/dashboard" routerLinkActive="active" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>Estatística</p>
+          </a>
+        </li>
+
+        <!--LOGISTICA-->
+        <li class="nav-item has-treeview mt-2" routerLinkActive="menu-open" *ngIf="this.canActivateRouterLink('logistica')">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fa fa-cogs"></i>
+            <p>
+              Atendimento ao Público
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-armazens')">
+              <a routerLink="/logistica/armazens/listar" routerLinkActive="active" class="nav-link">
+                <i class="fa fa-university nav-icon"></i>
+                Armazéns
+              </a>
+            </li>
+            <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-produtos')">
+              <a routerLink="/logistica/produtos/listar" routerLinkActive="active" class="nav-link"><i
+                  class="far fa-folder nav-icon"></i>
+                <p>Produtos/Serviços</p>
+              </a>
+            </li>
+            <li class="nav-item has-treeview" routerLinkActive="menu-open" *ngIf="this.canActivateRouterLink('stock')">
+              <a href="#" class="nav-link">
+                <i class="fa fa-folder nav-icon"></i>
+                <p>
+                  Gestão de Stock
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item has-treeview" routerLinkActive="menu-open"
+                  *ngIf="this.canActivateRouterLink('listar-mercadorias')">
                   <a href="#" class="nav-link">
-                    <i class="nav-icon fa fa-cogs"></i>
+                    <i class="fa fa-folder nav-icon"></i>
                     <p>
-                      Logística
+                      Mercadorias
                       <i class="right fas fa-angle-left"></i>
                     </p>
                   </a>
                   <ul class="nav nav-treeview">
-                    <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-armazens')">
-                      <a routerLink="/logistica/armazens/listar" routerLinkActive="active" class="nav-link">
-                        <i class="fa fa-university nav-icon"></i>
-                        Armazéns
+                    <li class="nav-item" *ngIf="
+                        this.canActivateRouterLink('listar-pedido-produtos')
+                      ">
+                      <a routerLink="/logistica/gestao-stock/mercadoria/pedido-produtos" routerLinkActive="active"
+                        class="nav-link">
+                        <i class="fa fa-search nav-icon"></i>
+                        <p>Pedido Central-Fornecedor</p>
                       </a>
                     </li>
-                    <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-produtos')">
-                      <a routerLink="/logistica/produtos/listar" routerLinkActive="active" class="nav-link"><i
-                          class="far fa-folder nav-icon"></i>
-                        <p>Produtos/Serviços</p>
+
+                    <li class="nav-item" *ngIf="
+                    this.canActivateRouterLink('listar-pedido-produtos-stock-entre-lojas-logistica')
+                  ">
+                      <a routerLink="/inventario/pedido-produtos-loja" routerLinkActive="active" class="nav-link"><i
+                          class="fa fa-folder nav-icon"></i>
+                        <p>Pedido Lojas-Lojas</p>
                       </a>
                     </li>
-                    <li class="nav-item has-treeview" routerLinkActive="menu-open" *ngIf="this.canActivateRouterLink('stock')">
+                    <li class="nav-item" *ngIf="
+                        this.canActivateRouterLink('listar-entrada-factura')
+                      ">
+                      <a routerLink="/logistica/gestao-stock/mercadoria/entrada-factura-po" routerLinkActive="active"
+                        class="nav-link">
+                        <i class="fa fa-search nav-icon"></i>
+                        <p>Entrada Factura ou PO</p>
+                      </a>
+                    </li>
+
+                    <!-- <li
+                      class="nav-item"
+                      *ngIf="
+                        this.canActivateRouterLink('listar-permission')
+                      "
+                    >
+                      <a
+                        routerLink="/logistica/gestao-stock/mercadoria/entrada-manual"
+                        routerLinkActive="active"
+                        class="nav-link"
+                      >
+                        <i class="fa fa-search nav-icon"></i>
+                        <p>Entrada Manual</p>
+                      </a>
+                    </li> -->
+                    <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-mercadorias')">
+                      <a routerLink="/logistica/gestao-stock/mercadoria/listar-mercadoria" routerLinkActive="active"
+                        class="nav-link">
+                        <i class="fa fa-search nav-icon"></i>
+                        <p>Listar Mercadorias</p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item has-treeview" routerLinkActive="menu-open"
+                      *ngIf="this.canActivateRouterLink('submodulo-transferencia-mercadoria-logistica')">
                       <a href="#" class="nav-link">
-                        <i class="fa fa-folder nav-icon"></i>
+                        <i class="fa fa-exchange-alt nav-icon"></i>
                         <p>
-                          Gestão de Stock
+                          Transf. de Mercadoria
                           <i class="right fas fa-angle-left"></i>
                         </p>
                       </a>
                       <ul class="nav nav-treeview">
-                        <li class="nav-item has-treeview" routerLinkActive="menu-open"
-                          *ngIf="this.canActivateRouterLink('listar-mercadorias')">
-                          <a href="#" class="nav-link">
-                            <i class="fa fa-folder nav-icon"></i>
-                            <p>
-                              Mercadorias
-                              <i class="right fas fa-angle-left"></i>
-                            </p>
-                          </a>
-                          <ul class="nav nav-treeview">
-                            <li class="nav-item" *ngIf="
-                                this.canActivateRouterLink('listar-pedido-produtos')
-                              ">
-                              <a routerLink="/logistica/gestao-stock/mercadoria/pedido-produtos" routerLinkActive="active"
-                                class="nav-link">
-                                <i class="fa fa-search nav-icon"></i>
-                                <p>Pedido Central-Fornecedor</p>
-                              </a>
-                            </li>
-        
-                            <li class="nav-item" *ngIf="
-                            this.canActivateRouterLink('listar-pedido-produtos-stock-entre-lojas-logistica')
-                          ">
-                              <a routerLink="/inventario/pedido-produtos-loja" routerLinkActive="active" class="nav-link"><i
-                                  class="fa fa-folder nav-icon"></i>
-                                <p>Pedido Lojas-Lojas</p>
-                              </a>
-                            </li>
-                            <li class="nav-item" *ngIf="
-                                this.canActivateRouterLink('listar-entrada-factura')
-                              ">
-                              <a routerLink="/logistica/gestao-stock/mercadoria/entrada-factura-po" routerLinkActive="active"
-                                class="nav-link">
-                                <i class="fa fa-search nav-icon"></i>
-                                <p>Entrada Factura ou PO</p>
-                              </a>
-                            </li>
-        
-                            <!-- <li
-                              class="nav-item"
-                              *ngIf="
-                                this.canActivateRouterLink('listar-permission')
-                              "
-                            >
-                              <a
-                                routerLink="/logistica/gestao-stock/mercadoria/entrada-manual"
-                                routerLinkActive="active"
-                                class="nav-link"
-                              >
-                                <i class="fa fa-search nav-icon"></i>
-                                <p>Entrada Manual</p>
-                              </a>
-                            </li> -->
-                            <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-mercadorias')">
-                              <a routerLink="/logistica/gestao-stock/mercadoria/listar-mercadoria" routerLinkActive="active"
-                                class="nav-link">
-                                <i class="fa fa-search nav-icon"></i>
-                                <p>Listar Mercadorias</p>
-                              </a>
-                            </li>
-        
-                            <li class="nav-item has-treeview" routerLinkActive="menu-open"
-                              *ngIf="this.canActivateRouterLink('submodulo-transferencia-mercadoria-logistica')">
-                              <a href="#" class="nav-link">
-                                <i class="fa fa-exchange-alt nav-icon"></i>
-                                <p>
-                                  Transf. de Mercadoria
-                                  <i class="right fas fa-angle-left"></i>
-                                </p>
-                              </a>
-                              <ul class="nav nav-treeview">
-        
-        
-                                <li class="nav-item" *ngIf="this.canActivateRouterLink('transferencia-do-armazem-local')">
-                                  <a routerLink="/logistica/gestao-stock/mercadoria/transferir-do-armazem-local"
-                                    routerLinkActive="active" class="nav-link">
-                                    <i class="fa fa-exchange-alt nav-icon"></i>
-                                    <p>Transferir Mercadorias</p>
-                                  </a>
-                                </li>
-        
-                                <li class="nav-item" *ngIf="this.canActivateRouterLink('historico-transferencia-mercadorias')">
-                                  <a routerLink="/logistica/gestao-stock/mercadoria/historico-transferencia-mercadorias"
-                                    routerLinkActive="active" class="nav-link">
-                                    <i class="fa fa-exchange-alt nav-icon"></i>
-                                    <p>Histórico de Transferências</p>
-                                  </a>
-                                </li>
-        
-                              </ul>
-                            </li>
-        
-                            <!--<li
-                              class="nav-item"
-                              *ngIf="this.canActivateRouterLink('listar-role')"
-                            >
-                              <a
-                                routerLink="/logistica/gestao-stock/mercadoria/fazer-devolucao"
-                                routerLinkActive="active"
-                                class="nav-link"
-                              >
-                                <i class="fa fa-search nav-icon"></i>
-                                <p>Fazer Devoluções</p>
-                              </a>
-                            </li>
-        
-                            <li
-                              class="nav-item"
-                              *ngIf="this.canActivateRouterLink('listar-role')"
-                            >
-                              <a
-                                routerLink="/logistica/gestao-stock/mercadoria/listar-devolucao"
-                                routerLinkActive="active"
-                                class="nav-link"
-                              >
-                                <i class="fa fa-search nav-icon"></i>
-                                <p>Listar Devoluções</p>
-                              </a>
-                            </li>-->
-                          </ul>
-                        </li>
-        
-                        <li class="nav-item" *ngIf="
-                            this.canActivateRouterLink('listar-movimentacao-stock')
-                          ">
-                          <a routerLink="/logistica/gestao-stock/movimentacao-stock" routerLinkActive="active" class="nav-link">
-                            <i class="fa fa-search nav-icon"></i>
-                            <p>Movimentação de Stock</p>
+
+
+                        <li class="nav-item" *ngIf="this.canActivateRouterLink('transferencia-do-armazem-local')">
+                          <a routerLink="/logistica/gestao-stock/mercadoria/transferir-do-armazem-local"
+                            routerLinkActive="active" class="nav-link">
+                            <i class="fa fa-exchange-alt nav-icon"></i>
+                            <p>Transferir Mercadorias</p>
                           </a>
                         </li>
-        
-                        <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-stock-existente')">
-                          <a routerLink="/logistica/gestao-stock/stock-existente" routerLinkActive="active" class="nav-link">
-                            <i class="fa fa-search nav-icon"></i>
-                            <p>Stock Existente</p>
+
+                        <li class="nav-item" *ngIf="this.canActivateRouterLink('historico-transferencia-mercadorias')">
+                          <a routerLink="/logistica/gestao-stock/mercadoria/historico-transferencia-mercadorias"
+                            routerLinkActive="active" class="nav-link">
+                            <i class="fa fa-exchange-alt nav-icon"></i>
+                            <p>Histórico de Transferências</p>
                           </a>
                         </li>
-        
-                        <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-lote-produto-logistica')">
-                          <a routerLink="/logistica/gestao-stock/listar-lote-produto-logistica" routerLinkActive="active"
-                            class="nav-link">
-                            <i class="fa fa-search nav-icon"></i>
-                            <p>Lote dos Produtos</p>
-                          </a>
-                        </li>
-        
-                        <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-caixa-produto-lote')">
-                          <a routerLink="/logistica/gestao-stock/listar-caixa-produto-lote" routerLinkActive="active"
-                            class="nav-link">
-                            <i class="fa fa-search nav-icon"></i>
-                            <p>Caixa Produto Lote</p>
-                          </a>
-                        </li>
-        
-                        <li class="nav-item" *ngIf="this.canActivateRouterLink('config-produtos-tipo-conta-logistica')">
-                          <a routerLink="/logistica/gestao-stock/config-produtos" routerLinkActive="active" class="nav-link">
-                            <i class="fa fa-cog nav-icon"></i>
-                            <p>Config. Produtos e Tipo Conta</p>
-                          </a>
-                        </li>
+
                       </ul>
                     </li>
+
+                    <!--<li
+                      class="nav-item"
+                      *ngIf="this.canActivateRouterLink('listar-role')"
+                    >
+                      <a
+                        routerLink="/logistica/gestao-stock/mercadoria/fazer-devolucao"
+                        routerLinkActive="active"
+                        class="nav-link"
+                      >
+                        <i class="fa fa-search nav-icon"></i>
+                        <p>Fazer Devoluções</p>
+                      </a>
+                    </li>
+
+                    <li
+                      class="nav-item"
+                      *ngIf="this.canActivateRouterLink('listar-role')"
+                    >
+                      <a
+                        routerLink="/logistica/gestao-stock/mercadoria/listar-devolucao"
+                        routerLinkActive="active"
+                        class="nav-link"
+                      >
+                        <i class="fa fa-search nav-icon"></i>
+                        <p>Listar Devoluções</p>
+                      </a>
+                    </li>-->
+                  </ul>
+                </li>
+
+                <li class="nav-item" *ngIf="
+                    this.canActivateRouterLink('listar-movimentacao-stock')
+                  ">
+                  <a routerLink="/logistica/gestao-stock/movimentacao-stock" routerLinkActive="active" class="nav-link">
+                    <i class="fa fa-search nav-icon"></i>
+                    <p>Movimentação de Stock</p>
+                  </a>
+                </li>
+
+                <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-stock-existente')">
+                  <a routerLink="/logistica/gestao-stock/stock-existente" routerLinkActive="active" class="nav-link">
+                    <i class="fa fa-search nav-icon"></i>
+                    <p>Stock Existente</p>
+                  </a>
+                </li>
+
+                <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-lote-produto-logistica')">
+                  <a routerLink="/logistica/gestao-stock/listar-lote-produto-logistica" routerLinkActive="active"
+                    class="nav-link">
+                    <i class="fa fa-search nav-icon"></i>
+                    <p>Lote dos Produtos</p>
+                  </a>
+                </li>
+
+                <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-caixa-produto-lote')">
+                  <a routerLink="/logistica/gestao-stock/listar-caixa-produto-lote" routerLinkActive="active"
+                    class="nav-link">
+                    <i class="fa fa-search nav-icon"></i>
+                    <p>Caixa Produto Lote</p>
+                  </a>
+                </li>
+
+                <li class="nav-item" *ngIf="this.canActivateRouterLink('config-produtos-tipo-conta-logistica')">
+                  <a routerLink="/logistica/gestao-stock/config-produtos" routerLinkActive="active" class="nav-link">
+                    <i class="fa fa-cog nav-icon"></i>
+                    <p>Config. Produtos e Tipo Conta</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item has-treeview" routerLinkActive="menu-open"
+              *ngIf="canActivateRouterLink('configurar-bundles-logistica')">
+              <a href="javascript:void(0)" class="nav-link"><i class="far fa-folder nav-icon"></i>
+                <p>
+                  Configurar Bundles<i class="right fa fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item" *ngIf="canActivateRouterLink('listar-bundles-logistica')">
+                  <a routerLink="/logistica/bundles/listar" routerLinkActive="active" class="nav-link"><i
+                      class="fa fa-folder nav-icon"></i>
+                    <p>Lista de Bundles</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-fornecedores')">
+              <a routerLink="/logistica/fornecedores/listar" routerLinkActive="active" class="nav-link"><i
+                  class="far fa-folder nav-icon"></i>
+                <p>Fornecedores</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!--END LOGISTICA-->
+
+        <!--LOGISTICA-->
+        <li class="nav-item has-treeview mt-2" routerLinkActive="menu-open" *ngIf="this.canActivateRouterLink('logistica')">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fa fa-cogs"></i>
+            <p>
+              Logística
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-armazens')">
+              <a routerLink="/logistica/armazens/listar" routerLinkActive="active" class="nav-link">
+                <i class="fa fa-university nav-icon"></i>
+                Armazéns
+              </a>
+            </li>
+            <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-produtos')">
+              <a routerLink="/logistica/produtos/listar" routerLinkActive="active" class="nav-link"><i
+                  class="far fa-folder nav-icon"></i>
+                <p>Produtos/Serviços</p>
+              </a>
+            </li>
+            <li class="nav-item has-treeview" routerLinkActive="menu-open" *ngIf="this.canActivateRouterLink('stock')">
+              <a href="#" class="nav-link">
+                <i class="fa fa-folder nav-icon"></i>
+                <p>
+                  Gestão de Stock
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item has-treeview" routerLinkActive="menu-open"
+                  *ngIf="this.canActivateRouterLink('listar-mercadorias')">
+                  <a href="#" class="nav-link">
+                    <i class="fa fa-folder nav-icon"></i>
+                    <p>
+                      Mercadorias
+                      <i class="right fas fa-angle-left"></i>
+                    </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                    <li class="nav-item" *ngIf="
+                        this.canActivateRouterLink('listar-pedido-produtos')
+                      ">
+                      <a routerLink="/logistica/gestao-stock/mercadoria/pedido-produtos" routerLinkActive="active"
+                        class="nav-link">
+                        <i class="fa fa-search nav-icon"></i>
+                        <p>Pedido Central-Fornecedor</p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item" *ngIf="
+                    this.canActivateRouterLink('listar-pedido-produtos-stock-entre-lojas-logistica')
+                  ">
+                      <a routerLink="/inventario/pedido-produtos-loja" routerLinkActive="active" class="nav-link"><i
+                          class="fa fa-folder nav-icon"></i>
+                        <p>Pedido Lojas-Lojas</p>
+                      </a>
+                    </li>
+                    <li class="nav-item" *ngIf="
+                        this.canActivateRouterLink('listar-entrada-factura')
+                      ">
+                      <a routerLink="/logistica/gestao-stock/mercadoria/entrada-factura-po" routerLinkActive="active"
+                        class="nav-link">
+                        <i class="fa fa-search nav-icon"></i>
+                        <p>Entrada Factura ou PO</p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-mercadorias')">
+                      <a routerLink="/logistica/gestao-stock/mercadoria/listar-mercadoria" routerLinkActive="active"
+                        class="nav-link">
+                        <i class="fa fa-search nav-icon"></i>
+                        <p>Listar Mercadorias</p>
+                      </a>
+                    </li>
+
                     <li class="nav-item has-treeview" routerLinkActive="menu-open"
-                      *ngIf="canActivateRouterLink('configurar-bundles-logistica')">
-                      <a href="javascript:void(0)" class="nav-link"><i class="far fa-folder nav-icon"></i>
+                      *ngIf="this.canActivateRouterLink('submodulo-transferencia-mercadoria-logistica')">
+                      <a href="#" class="nav-link">
+                        <i class="fa fa-exchange-alt nav-icon"></i>
                         <p>
-                          Configurar Bundles<i class="right fa fa-angle-left"></i>
+                          Transf. de Mercadoria
+                          <i class="right fas fa-angle-left"></i>
                         </p>
                       </a>
                       <ul class="nav nav-treeview">
-                        <li class="nav-item" *ngIf="canActivateRouterLink('listar-bundles-logistica')">
-                          <a routerLink="/logistica/bundles/listar" routerLinkActive="active" class="nav-link"><i
-                              class="fa fa-folder nav-icon"></i>
-                            <p>Lista de Bundles</p>
+
+
+                        <li class="nav-item" *ngIf="this.canActivateRouterLink('transferencia-do-armazem-local')">
+                          <a routerLink="/logistica/gestao-stock/mercadoria/transferir-do-armazem-local"
+                            routerLinkActive="active" class="nav-link">
+                            <i class="fa fa-exchange-alt nav-icon"></i>
+                            <p>Transferir Mercadorias</p>
                           </a>
                         </li>
+
+                        <li class="nav-item" *ngIf="this.canActivateRouterLink('historico-transferencia-mercadorias')">
+                          <a routerLink="/logistica/gestao-stock/mercadoria/historico-transferencia-mercadorias"
+                            routerLinkActive="active" class="nav-link">
+                            <i class="fa fa-exchange-alt nav-icon"></i>
+                            <p>Histórico de Transferências</p>
+                          </a>
+                        </li>
+
                       </ul>
                     </li>
-        
-                    <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-fornecedores')">
-                      <a routerLink="/logistica/fornecedores/listar" routerLinkActive="active" class="nav-link"><i
-                          class="far fa-folder nav-icon"></i>
-                        <p>Fornecedores</p>
-                      </a>
-                    </li>
+
                   </ul>
                 </li>
-                <!--END LOGISTICA-->
+
+                <li class="nav-item" *ngIf="
+                    this.canActivateRouterLink('listar-movimentacao-stock')
+                  ">
+                  <a routerLink="/logistica/gestao-stock/movimentacao-stock" routerLinkActive="active" class="nav-link">
+                    <i class="fa fa-search nav-icon"></i>
+                    <p>Movimentação de Stock</p>
+                  </a>
+                </li>
+
+                <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-stock-existente')">
+                  <a routerLink="/logistica/gestao-stock/stock-existente" routerLinkActive="active" class="nav-link">
+                    <i class="fa fa-search nav-icon"></i>
+                    <p>Stock Existente</p>
+                  </a>
+                </li>
+
+                <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-lote-produto-logistica')">
+                  <a routerLink="/logistica/gestao-stock/listar-lote-produto-logistica" routerLinkActive="active"
+                    class="nav-link">
+                    <i class="fa fa-search nav-icon"></i>
+                    <p>Lote dos Produtos</p>
+                  </a>
+                </li>
+
+                <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-caixa-produto-lote')">
+                  <a routerLink="/logistica/gestao-stock/listar-caixa-produto-lote" routerLinkActive="active"
+                    class="nav-link">
+                    <i class="fa fa-search nav-icon"></i>
+                    <p>Caixa Produto Lote</p>
+                  </a>
+                </li>
+
+                <li class="nav-item" *ngIf="this.canActivateRouterLink('config-produtos-tipo-conta-logistica')">
+                  <a routerLink="/logistica/gestao-stock/config-produtos" routerLinkActive="active" class="nav-link">
+                    <i class="fa fa-cog nav-icon"></i>
+                    <p>Config. Produtos e Tipo Conta</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item has-treeview" routerLinkActive="menu-open"
+              *ngIf="canActivateRouterLink('configurar-bundles-logistica')">
+              <a href="javascript:void(0)" class="nav-link"><i class="far fa-folder nav-icon"></i>
+                <p>
+                  Configurar Bundles<i class="right fa fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item" *ngIf="canActivateRouterLink('listar-bundles-logistica')">
+                  <a routerLink="/logistica/bundles/listar" routerLinkActive="active" class="nav-link"><i
+                      class="fa fa-folder nav-icon"></i>
+                    <p>Lista de Bundles</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-fornecedores')">
+              <a routerLink="/logistica/fornecedores/listar" routerLinkActive="active" class="nav-link"><i
+                  class="far fa-folder nav-icon"></i>
+                <p>Fornecedores</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!--END LOGISTICA-->
+
+                
+        <li class="nav-item has-treeview">
+          <a routerLink="/dashboard" routerLinkActive="active" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>Relatórios</p>
+          </a>
+        </li>
+
+        <hr/>
 
       </ul>
     </nav>
     <!-- /.sidebar-menu -->
+    <h3 style="padding: 2rem; color: white; opacity: .75;">Geral</h3>
+    <!-- Sidebar Menu -->
+    <nav class="mt-0">
+      <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview" role="menu"
+        data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+        <li class="nav-item has-treeview">
+          <a routerLink="/dashboard" routerLinkActive="active" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>Definições</p>
+          </a>
+        </li>
+
+        <li class="nav-item has-treeview">
+          <a routerLink="/dashboard" routerLinkActive="active" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>Segurança</p>
+          </a>
+        </li>
+
+        <li class="nav-item has-treeview">
+          <a routerLink="/dashboard" routerLinkActive="active" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>Terminar Sessão</p>
+          </a>
+        </li>
+
+        <br>
+        <hr>
+
+      </ul>
+    </nav>
   </div>
   <!-- /.sidebar -->
 </aside>

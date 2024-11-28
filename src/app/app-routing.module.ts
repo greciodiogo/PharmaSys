@@ -89,16 +89,6 @@ export const routes: Routes = [
       },
     ],
   },
-
-  {
-    path: '404',
-    component: P404Component,
-    data: {
-      title: 'Page 404',
-      layout: { customLayout: false, layoutNavigationTop: true },
-    },
-  },
-
 ];
 
 @NgModule({
