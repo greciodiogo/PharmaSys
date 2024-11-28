@@ -1124,7 +1124,7 @@ aw-wizard-navigation-bar.horizontal.large-filled ul.steps-indicator li.editing .
 @media (min-width: 768px){
   body:not(.sidebar-mini-md) .content-wrapper, body:not(.sidebar-mini-md) .main-footer, body:not(.sidebar-mini-md) .main-header {
       transition: margin-left .3s ease-in-out;
-      margin-left: 450px;
+      margin-left: 410px;
   }
 }
 .main-sidebar, .main-sidebar::before {
@@ -1132,7 +1132,7 @@ aw-wizard-navigation-bar.horizontal.large-filled ul.steps-indicator li.editing .
  }
 
 .layout-fixed .brand-link, .main-sidebar, .main-sidebar::before {
-  width: 450px;
+  width: 410px;
 }
 
 .login-bg {
@@ -1229,7 +1229,7 @@ nav {
 }
 
 .nav-sidebar>.nav-item .nav-icon {
-    border: 1px solid var(--app-main-color);
+    /* border: 1px solid var(--app-main-color); */
 }
 
 .nav-sidebar > .nav-item .nav-icon {
@@ -1364,7 +1364,7 @@ nav {
 .layout-fixed .brand-link {
     top: 0px;
     left: 0px;
-    width: 450px;
+    width: 410px;
     height: 70px;
     background: transparent 0% 0% no-repeat padding-box;
     opacity: 1;

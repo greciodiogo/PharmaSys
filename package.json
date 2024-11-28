@@ -1,5 +1,5 @@
 {
-  "name": "PharmaSys",
+  "name": "pharma-sys",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -43,7 +43,7 @@
     "angular-material-fileupload": "^3.0.2",
     "angular-ng-autocomplete": "^2.0.12",
     "angular-progress-bar": "^1.0.11",
-    "apexcharts": "^3.51.0",
+    "apexcharts": "^3.36.3",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.5.0",
     "chart.js": "^2.9.4",
@@ -58,7 +58,7 @@
     "jspdf-autotable": "^3.8.2",
     "mgx-circular-progress-bar": "0.0.2",
     "moment": "^2.30.1",
-    "ng-apexcharts": "^1.10.0",
+    "ng-apexcharts": "^1.7.4",
     "ng-connection-service": "^9.0.3",
     "ng-multiselect-dropdown": "^0.3.9",
     "ng2-charts": "^2.4.3",
@@ -75,7 +75,6 @@
     "ngx-mat-select-search": "^3.3.3",
     "ngx-operators": "^4.0.1",
     "ngx-pagination": "^5.1.1",
-    "ngx-quill-editor": "^2.10.1",
     "ngx-skeleton-loader": "^2.10.1",
     "ngx-spinner": "^11.0.2",
     "ngx-toastr": "^18.0.0",
@@ -93,6 +92,7 @@
     "tslib": "^2.6.2",
     "websocket-client": "^1.0.0",
     "xlsx": "^0.17.5",
+    "yarn": "^1.22.22",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
