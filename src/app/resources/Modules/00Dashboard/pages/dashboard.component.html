@@ -4,7 +4,9 @@
     <div class="box_item"></div>
     <div class="box_item">
       <h4>Valor Total Produtos em Stock</h4>
-      <span> {{configService.numberFormat(3297600)}} Kz</span>
+      <span>
+        <i style="color: #1D8A4F" class="fa-solid fa-coin"></i> 
+        {{configService.numberFormat(3297600)}} Kz</span>
     </div>
     <div class="box_item">
       <h4>Produtos Próximos da Validade</h4>
@@ -28,13 +30,16 @@
       <div class="box_item" style="background-color: #022213;">
         <h2>Ultimos Movimentos</h2>
         <ul>
-          <li>Reumon Gel (50mg/g) 100 g Gel</li>
-          <li>Vicombil 60 comprimidos Revestidos</li>
-          <li>Halibut 150mg/G Pomada 100g</li>
-          <li>Bepantol Derma Spray 50ml</li>
-          <li>Vicks Vaporub 12g</li>
-          <li>Alergrip 20 Cápsulas</li>
-          <li>Veltuss Garganta Irritada</li>
+          <li *ngFor="let item of dataJson">
+            <a href="#" class="single_item">
+              <span>
+                <i style="color: white;" class="fa-solid fa-flask-round-potion mr-2"></i>
+                {{ item?.name }}
+              </span>
+              <i style="color: white;" class="fa-solid fa-arrow-up-right"></i>
+            </a>
+            <span>{{ item?.created_at }}</span>
+          </li>
         </ul>
         
       </div>

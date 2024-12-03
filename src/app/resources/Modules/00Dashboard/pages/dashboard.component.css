@@ -73,7 +73,9 @@
 }
 
 .wrapper .box_item:nth-child(2) ul{
-  margin-top: 1rem;
+  padding: 0;
+  margin: 0;
+  margin-top: 2rem;
   list-style: none;
   color: #ffff;
   display: flex;
@@ -82,9 +84,25 @@
 }
 
 .wrapper .box_item:nth-child(2) ul li{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.single_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: #ffff;
+  opacity: .85;
   font-size: 20px;
   line-height: 1.2;
+  text-decoration: none;
+}
+
+.wrapper .box_item:nth-child(2) ul li > span{
+  margin-left: 2rem;
 }
 
 .wrapper .box_item:nth-child(3) {

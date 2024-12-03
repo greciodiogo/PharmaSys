@@ -9,6 +9,38 @@ import { diffString, diff } from 'json-diff';
   templateUrl: './dashboard.component.html',
 })
 export class DashboardComponent implements OnInit, OnDestroy {
+  dataJson = [
+    {
+      "id": 1,
+      "name": "Reumon Gel (50mg/g) 100 g Gel",
+      "price": 3.5,
+      "created_at": "2024-01-15",
+    },
+    {
+      "id": 2,
+      "name": "Vicombil 60 comprimidos Revestidos",
+      "price": 3.5,
+      "created_at": "2024-01-15",
+    },
+    {
+      "id": 1,
+      "name": "Halibut 150mg/G Pomada 100g",
+      "price": 3.5,
+      "created_at": "2024-01-15",
+    },
+    {
+      "id": 1,
+      "name": "Bepantol Derma Spray 50ml",
+      "price": 3.5,
+      "created_at": "2024-01-15",
+    },
+    {
+      "id": 1,
+      "name": "Vicks Vaporub 12g",
+      "price": 3.5,
+      "created_at": "2024-01-15",
+    },
+  ]
   public dashboard: any = {
     facturas: 0,
     clientes: 0,
