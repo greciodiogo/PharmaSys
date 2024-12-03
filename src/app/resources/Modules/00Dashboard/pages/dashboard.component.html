@@ -2,9 +2,22 @@
   <h2 class="dashboard_title">Dashboard</h2>
   <div class="dashboard_item_container">
     <div class="box_item"></div>
-    <div class="box_item"></div>
-    <div class="box_item"></div>
-    <div class="box_item"></div>
+    <div class="box_item">
+      <h4>Valor Total Produtos em Stock</h4>
+      <span> {{configService.numberFormat(3297600)}} Kz</span>
+    </div>
+    <div class="box_item">
+      <h4>Produtos Próximos da Validade</h4>
+      <a href="#" class="hyper-link">
+        <span> {{configService.formatarQuantidade(46)}}</span>
+      </a>
+    </div>
+    <div class="box_item">
+      <h4>Produtos com Baixo Stock</h4>
+      <a href="#" class="hyper-link">
+        <span> {{configService.formatarQuantidade(38)}}</span>
+      </a>
+    </div>
   </div>
   <div class="dashboard_container">
     <h2 class="dashboard_title" style="margin-top: 2rem;">Estatística</h2>
@@ -12,7 +25,19 @@
       <div class="box_item">
         <grafico-bar-chart></grafico-bar-chart>
       </div>
-      <div class="box_item" style="background-color: #022213;"></div>
+      <div class="box_item" style="background-color: #022213;">
+        <h2>Ultimos Movimentos</h2>
+        <ul>
+          <li>Reumon Gel (50mg/g) 100 g Gel</li>
+          <li>Vicombil 60 comprimidos Revestidos</li>
+          <li>Halibut 150mg/G Pomada 100g</li>
+          <li>Bepantol Derma Spray 50ml</li>
+          <li>Vicks Vaporub 12g</li>
+          <li>Alergrip 20 Cápsulas</li>
+          <li>Veltuss Garganta Irritada</li>
+        </ul>
+        
+      </div>
       <div class="box_item">
         <grafico-pie-chart></grafico-pie-chart>
       </div>

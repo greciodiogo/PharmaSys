@@ -21,7 +21,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
   public log:Array<Object> = new Array<Object>();
 
-  constructor(public dash: DashboardService,private permission: PermissionService,public fnService: FnService) {}
+  constructor(public dash: DashboardService,private permission: PermissionService,public configService: FnService) {}
 
   public getDashboardInit() {
     this.dash.getDashboardInit().subscribe((data) => {
