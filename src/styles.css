@@ -2,7 +2,7 @@
 
 /* You can add global styles to this file, and also import other style files */
 
-@import url(assets/plugins/font-awesome/css/font-awesome.min.css);
+@import url(assets/plugins/font-awesome/css/fontawesome.min.css);
 @import url(assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css);
 @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic";
 @import '~ngx-toastr/toastr';
@@ -22,6 +22,7 @@
   --app-main-color: #fff;
   /* --app-main-color: #2D6A4F; */
   --app-color: #022213;
+  --app-theme-color: #1D8A4F;
   --app-bg-color: white;
   --app-secondary-color: #2A2D34
 }
@@ -897,9 +898,7 @@ table {
   position: fixed;
   padding: 28px;
   color: #888787f0;
-  border-top: 0px solid #dee2e6;
-  background: url(/assets/dist/img/logo_at_unig_itgest.png) #22283a 50% 31% no-repeat padding-box !important;
-  background-size: 9% !important;
+  background-color: var(--app-theme-color) !important;
 }
 
 .nav-sidebar.nav-child-indent .nav-treeview {
@@ -1314,7 +1313,7 @@ nav {
 .main-footer {
   color: #fff;
   /* /assets/img/logo_at_unig_itgesttt.png */
-   background: var(--app-main-color) 50% 31% no-repeat padding-box !important;
+   background: var(--app-theme-color)  !important;
   background-size: 9% !important;
 }
 
