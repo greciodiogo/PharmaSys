@@ -129,7 +129,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
    * @return [description]
    */
   private getTitle(title: string): string {
-    return title ? `Unig4Telco :: ${title}` : this.titleTag;
+    return title ? `Pharma Sys :: ${title}` : this.titleTag;
   }
 
   // Shows and hides the loading spinner during RouterEvent changes
