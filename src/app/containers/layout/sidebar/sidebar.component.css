@@ -2,3 +2,8 @@
   padding-left: 0;
   padding-right: 0;
 }
+
+.nav-icon{
+  width: 50px !important;
+  font-size: 25px !important;
+}

@@ -5,6 +5,7 @@ import { environment as env } from '@env/environment';
 
 @Component({
   selector: "app-header",
+  styleUrls: ["./header.component.css"],
   templateUrl: "./header.component.html",
 })
 export class HeaderComponent implements OnInit {

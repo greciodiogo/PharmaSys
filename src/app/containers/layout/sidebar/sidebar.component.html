@@ -1,15 +1,15 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-40 sidebar-dark-info">
   <!-- Brand Logo -->
-  <a routerLink="/dashboard" class="brand-link">
-    <!-- <img src="../../../../assets/img/{{ logotipo }}" alt="AdminLTE Logo" class="brand-imagee img-circlee elevation-3e"
-      style="opacity: 0.8; width: 104px" /> -->
+  <a routerLink="/dashboard" class="" style="display: flex; align-items: center; justify-self: center">
+    <img src="../../../../assets/img/logo.png" alt="AdminLTE Logo" class="brand-imagee img-circlee elevation-3e"
+      style="opacity: 0.8; width: 154px" />
     <span class="brand-text font-weight-lightf" style="color: black"><b></b></span>
   </a>
 
   <!-- Sidebar -->
   <div class="sidebar">
 
-    <h3 style="padding: 2rem; color: white; opacity: .75;">Menu</h3>
+    <h3 style="padding: 1rem 2rem; color: white; opacity: .75;">Menu</h3>
     <!-- Sidebar Menu -->
     <nav class="mt-0">
       <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview" role="menu"
@@ -18,14 +18,14 @@
                with font-awesome or any other icon font library -->
         <li class="nav-item has-treeview">
           <a routerLink="/dashboard" routerLinkActive="active" class="nav-link">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <i class="nav-icon fa-solid fa-grid-2" style="color: #1D8A4F;"></i>
             <p>Página Principal</p>
           </a>
         </li>
 
         <li class="nav-item has-treeview">
           <a routerLink="/dashboard" routerLinkActive="active" class="nav-link">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <i class="nav-icon fa-thin fa-chart-pie-simple"></i>
             <p>Estatística</p>
           </a>
         </li>
@@ -33,230 +33,21 @@
         <!--LOGISTICA-->
         <li class="nav-item has-treeview mt-2" routerLinkActive="menu-open" *ngIf="this.canActivateRouterLink('logistica')">
           <a href="#" class="nav-link">
-            <i class="nav-icon fa fa-cogs"></i>
+            <i class="nav-icon fa-thin fa-user-group"></i>
             <p>
               Atendimento ao Público
-              <i class="right fas fa-angle-left"></i>
             </p>
           </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-armazens')">
-              <a routerLink="/logistica/armazens/listar" routerLinkActive="active" class="nav-link">
-                <i class="fa fa-university nav-icon"></i>
-                Armazéns
-              </a>
-            </li>
-            <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-produtos')">
-              <a routerLink="/logistica/produtos/listar" routerLinkActive="active" class="nav-link"><i
-                  class="far fa-folder nav-icon"></i>
-                <p>Produtos/Serviços</p>
-              </a>
-            </li>
-            <li class="nav-item has-treeview" routerLinkActive="menu-open" *ngIf="this.canActivateRouterLink('stock')">
-              <a href="#" class="nav-link">
-                <i class="fa fa-folder nav-icon"></i>
-                <p>
-                  Gestão de Stock
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item has-treeview" routerLinkActive="menu-open"
-                  *ngIf="this.canActivateRouterLink('listar-mercadorias')">
-                  <a href="#" class="nav-link">
-                    <i class="fa fa-folder nav-icon"></i>
-                    <p>
-                      Mercadorias
-                      <i class="right fas fa-angle-left"></i>
-                    </p>
-                  </a>
-                  <ul class="nav nav-treeview">
-                    <li class="nav-item" *ngIf="
-                        this.canActivateRouterLink('listar-pedido-produtos')
-                      ">
-                      <a routerLink="/logistica/gestao-stock/mercadoria/pedido-produtos" routerLinkActive="active"
-                        class="nav-link">
-                        <i class="fa fa-search nav-icon"></i>
-                        <p>Pedido Central-Fornecedor</p>
-                      </a>
-                    </li>
-
-                    <li class="nav-item" *ngIf="
-                    this.canActivateRouterLink('listar-pedido-produtos-stock-entre-lojas-logistica')
-                  ">
-                      <a routerLink="/inventario/pedido-produtos-loja" routerLinkActive="active" class="nav-link"><i
-                          class="fa fa-folder nav-icon"></i>
-                        <p>Pedido Lojas-Lojas</p>
-                      </a>
-                    </li>
-                    <li class="nav-item" *ngIf="
-                        this.canActivateRouterLink('listar-entrada-factura')
-                      ">
-                      <a routerLink="/logistica/gestao-stock/mercadoria/entrada-factura-po" routerLinkActive="active"
-                        class="nav-link">
-                        <i class="fa fa-search nav-icon"></i>
-                        <p>Entrada Factura ou PO</p>
-                      </a>
-                    </li>
-
-                    <!-- <li
-                      class="nav-item"
-                      *ngIf="
-                        this.canActivateRouterLink('listar-permission')
-                      "
-                    >
-                      <a
-                        routerLink="/logistica/gestao-stock/mercadoria/entrada-manual"
-                        routerLinkActive="active"
-                        class="nav-link"
-                      >
-                        <i class="fa fa-search nav-icon"></i>
-                        <p>Entrada Manual</p>
-                      </a>
-                    </li> -->
-                    <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-mercadorias')">
-                      <a routerLink="/logistica/gestao-stock/mercadoria/listar-mercadoria" routerLinkActive="active"
-                        class="nav-link">
-                        <i class="fa fa-search nav-icon"></i>
-                        <p>Listar Mercadorias</p>
-                      </a>
-                    </li>
-
-                    <li class="nav-item has-treeview" routerLinkActive="menu-open"
-                      *ngIf="this.canActivateRouterLink('submodulo-transferencia-mercadoria-logistica')">
-                      <a href="#" class="nav-link">
-                        <i class="fa fa-exchange-alt nav-icon"></i>
-                        <p>
-                          Transf. de Mercadoria
-                          <i class="right fas fa-angle-left"></i>
-                        </p>
-                      </a>
-                      <ul class="nav nav-treeview">
-
-
-                        <li class="nav-item" *ngIf="this.canActivateRouterLink('transferencia-do-armazem-local')">
-                          <a routerLink="/logistica/gestao-stock/mercadoria/transferir-do-armazem-local"
-                            routerLinkActive="active" class="nav-link">
-                            <i class="fa fa-exchange-alt nav-icon"></i>
-                            <p>Transferir Mercadorias</p>
-                          </a>
-                        </li>
-
-                        <li class="nav-item" *ngIf="this.canActivateRouterLink('historico-transferencia-mercadorias')">
-                          <a routerLink="/logistica/gestao-stock/mercadoria/historico-transferencia-mercadorias"
-                            routerLinkActive="active" class="nav-link">
-                            <i class="fa fa-exchange-alt nav-icon"></i>
-                            <p>Histórico de Transferências</p>
-                          </a>
-                        </li>
-
-                      </ul>
-                    </li>
-
-                    <!--<li
-                      class="nav-item"
-                      *ngIf="this.canActivateRouterLink('listar-role')"
-                    >
-                      <a
-                        routerLink="/logistica/gestao-stock/mercadoria/fazer-devolucao"
-                        routerLinkActive="active"
-                        class="nav-link"
-                      >
-                        <i class="fa fa-search nav-icon"></i>
-                        <p>Fazer Devoluções</p>
-                      </a>
-                    </li>
-
-                    <li
-                      class="nav-item"
-                      *ngIf="this.canActivateRouterLink('listar-role')"
-                    >
-                      <a
-                        routerLink="/logistica/gestao-stock/mercadoria/listar-devolucao"
-                        routerLinkActive="active"
-                        class="nav-link"
-                      >
-                        <i class="fa fa-search nav-icon"></i>
-                        <p>Listar Devoluções</p>
-                      </a>
-                    </li>-->
-                  </ul>
-                </li>
-
-                <li class="nav-item" *ngIf="
-                    this.canActivateRouterLink('listar-movimentacao-stock')
-                  ">
-                  <a routerLink="/logistica/gestao-stock/movimentacao-stock" routerLinkActive="active" class="nav-link">
-                    <i class="fa fa-search nav-icon"></i>
-                    <p>Movimentação de Stock</p>
-                  </a>
-                </li>
-
-                <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-stock-existente')">
-                  <a routerLink="/logistica/gestao-stock/stock-existente" routerLinkActive="active" class="nav-link">
-                    <i class="fa fa-search nav-icon"></i>
-                    <p>Stock Existente</p>
-                  </a>
-                </li>
-
-                <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-lote-produto-logistica')">
-                  <a routerLink="/logistica/gestao-stock/listar-lote-produto-logistica" routerLinkActive="active"
-                    class="nav-link">
-                    <i class="fa fa-search nav-icon"></i>
-                    <p>Lote dos Produtos</p>
-                  </a>
-                </li>
-
-                <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-caixa-produto-lote')">
-                  <a routerLink="/logistica/gestao-stock/listar-caixa-produto-lote" routerLinkActive="active"
-                    class="nav-link">
-                    <i class="fa fa-search nav-icon"></i>
-                    <p>Caixa Produto Lote</p>
-                  </a>
-                </li>
-
-                <li class="nav-item" *ngIf="this.canActivateRouterLink('config-produtos-tipo-conta-logistica')">
-                  <a routerLink="/logistica/gestao-stock/config-produtos" routerLinkActive="active" class="nav-link">
-                    <i class="fa fa-cog nav-icon"></i>
-                    <p>Config. Produtos e Tipo Conta</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item has-treeview" routerLinkActive="menu-open"
-              *ngIf="canActivateRouterLink('configurar-bundles-logistica')">
-              <a href="javascript:void(0)" class="nav-link"><i class="far fa-folder nav-icon"></i>
-                <p>
-                  Configurar Bundles<i class="right fa fa-angle-left"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item" *ngIf="canActivateRouterLink('listar-bundles-logistica')">
-                  <a routerLink="/logistica/bundles/listar" routerLinkActive="active" class="nav-link"><i
-                      class="fa fa-folder nav-icon"></i>
-                    <p>Lista de Bundles</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item" *ngIf="this.canActivateRouterLink('listar-fornecedores')">
-              <a routerLink="/logistica/fornecedores/listar" routerLinkActive="active" class="nav-link"><i
-                  class="far fa-folder nav-icon"></i>
-                <p>Fornecedores</p>
-              </a>
-            </li>
-          </ul>
         </li>
         <!--END LOGISTICA-->
 
         <!--LOGISTICA-->
         <li class="nav-item has-treeview mt-2" routerLinkActive="menu-open" *ngIf="this.canActivateRouterLink('logistica')">
           <a href="#" class="nav-link">
-            <i class="nav-icon fa fa-cogs"></i>
+            <i class="nav-icon fa-thin fa-cart-flatbed"></i>
             <p>
               Logística
-              <i class="right fas fa-angle-left"></i>
+              <i class="right fas fa-angle-down"></i>
             </p>
           </a>
           <ul class="nav nav-treeview">
@@ -277,7 +68,7 @@
                 <i class="fa fa-folder nav-icon"></i>
                 <p>
                   Gestão de Stock
-                  <i class="right fas fa-angle-left"></i>
+                  <i class="right fas fa-angle-down"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
@@ -287,7 +78,7 @@
                     <i class="fa fa-folder nav-icon"></i>
                     <p>
                       Mercadorias
-                      <i class="right fas fa-angle-left"></i>
+                      <i class="right fas fa-angle-down"></i>
                     </p>
                   </a>
                   <ul class="nav nav-treeview">
@@ -333,7 +124,7 @@
                         <i class="fa fa-exchange-alt nav-icon"></i>
                         <p>
                           Transf. de Mercadoria
-                          <i class="right fas fa-angle-left"></i>
+                          <i class="right fas fa-angle-down"></i>
                         </p>
                       </a>
                       <ul class="nav nav-treeview">
@@ -405,7 +196,7 @@
               *ngIf="canActivateRouterLink('configurar-bundles-logistica')">
               <a href="javascript:void(0)" class="nav-link"><i class="far fa-folder nav-icon"></i>
                 <p>
-                  Configurar Bundles<i class="right fa fa-angle-left"></i>
+                  Configurar Bundles<i class="right fa fa-angle-down"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
@@ -430,8 +221,8 @@
 
                 
         <li class="nav-item has-treeview">
-          <a routerLink="/dashboard" routerLinkActive="active" class="nav-link">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
+          <a routerLink="/dashboard" routerLinkActive="active" class="nav-link">            
+            <i class="nav-icon fa-thin fa-file-chart-column"></i>
             <p>Relatórios</p>
           </a>
         </li>
@@ -441,7 +232,7 @@
       </ul>
     </nav>
     <!-- /.sidebar-menu -->
-    <h3 style="padding: 2rem; color: white; opacity: .75;">Geral</h3>
+    <h3 style="padding: 1rem 2rem; color: white; opacity: .75;">Geral</h3>
     <!-- Sidebar Menu -->
     <nav class="mt-0">
       <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview" role="menu"
@@ -450,21 +241,21 @@
                with font-awesome or any other icon font library -->
         <li class="nav-item has-treeview">
           <a routerLink="/dashboard" routerLinkActive="active" class="nav-link">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <i class="nav-icon fa-thin fa-gears"></i>
             <p>Definições</p>
           </a>
         </li>
 
         <li class="nav-item has-treeview">
           <a routerLink="/dashboard" routerLinkActive="active" class="nav-link">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <i class="nav-icon fa-thin fa-shield-check"></i>
             <p>Segurança</p>
           </a>
         </li>
 
         <li class="nav-item has-treeview">
-          <a routerLink="/dashboard" routerLinkActive="active" class="nav-link">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
+          <a href="#" routerLinkActive="active" class="nav-link" (click)="this.authenticated.logout()">
+            <i class="nav-icon fa-thin fa-plug"></i>
             <p>Terminar Sessão</p>
           </a>
         </li>
