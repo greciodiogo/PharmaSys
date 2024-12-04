@@ -18,7 +18,7 @@
                with font-awesome or any other icon font library -->
         <li class="nav-item has-treeview">
           <a routerLink="/dashboard" routerLinkActive="active" class="nav-link">
-            <i class="nav-icon fa-thin fa-grid-2"></i>
+            <i class="nav-icon fa-solid fa-grid-2" style="color: #1D8A4F;"></i>
             <p>Página Principal</p>
           </a>
         </li>
@@ -254,7 +254,7 @@
         </li>
 
         <li class="nav-item has-treeview">
-          <a routerLink="/dashboard" routerLinkActive="active" class="nav-link">
+          <a href="#" routerLinkActive="active" class="nav-link" (click)="this.authenticated.logout()">
             <i class="nav-icon fa-thin fa-plug"></i>
             <p>Terminar Sessão</p>
           </a>
