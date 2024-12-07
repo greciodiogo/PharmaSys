@@ -9,8 +9,10 @@ PharmaSys
 <br /> <div align="center"> <a href="https://github.com/greciodiogo/PharmaSys"> <img src="src/assets/img/logo.png" alt="Logo" width="80" height="80"> </a> <h3 align="center">PharmaSys</h3> <p align="center"> Sistema de gestão de farmácias para simplificar e organizar as operações farmacêuticas. <br /> <a href="https://github.com/greciodiogo/PharmaSys"><strong>Explore a documentação »</strong></a> <br /> <br /> <a href="https://github.com/greciodiogo/PharmaSys">Ver Demonstração</a> · <a href="https://github.com/greciodiogo/PharmaSys/issues">Reportar Problema</a> · <a href="https://github.com/greciodiogo/PharmaSys/issues">Solicitar Funcionalidade</a> </p> </div>
 
 ### Sobre o Projeto
-
-<img src="src/assets/img/project-overview.png" alt="PharmaSys Overview" width="600" height="400px">
+<div align="center">
+    <img src="src/assets/img/project-overview.png"  alt="PharmaSys Overview" width="600" height="400px">
+</div>
+<br />
 
 O **PharmaSys** é um sistema de gestão de farmácias projetado para simplificar e organizar as operações farmacêuticas. Ele ajuda na gestão de estoque, acompanhamento de pacientes e integração com fornecedores.
 
